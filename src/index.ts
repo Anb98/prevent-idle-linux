@@ -44,6 +44,10 @@ app.post("/api/toggle", async (req: Request, res: Response) => {
   }
 });
 
+app.get("/api/status", (req: Request, res: Response) => {
+  return res.json({ status: runningProcess ? "running" : "stopped" });
+});
+
 app.listen(PORT, () => {
   console.log(`API listening at http://localhost:${PORT}`);
 });

@@ -65,6 +65,8 @@ The API will be available at `http://localhost:3111` (port configurable via the 
 - `POST /api/toggle`: Starts or stops the execution of `mouse.sh`.
   - If the script is stopped, it will start and, if `BROWSER_URL` is set, open Chromium-browser with that URL.
   - If the script is running, it will stop and close Chromium-browser if it was opened by the API.
+- `GET /api/status`: Returns the current status of the script.
+  - Response: `{ status: "running" | "stopped" }`
 
 ## Project structure
 
